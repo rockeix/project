@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./admin.css" rel="stylesheet">
+    <script src="./admin.js"></script>
+</header>
+<body>
+<div style="width: 100%; height: 100%; position: relative; background: white">
+    <div style="left: 149px; top: 55px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Inter; font-weight: 700; word-wrap: break-word"><br/><br/><br/><br/></div>
+    <div style="left: 29px; top: 151px; position: absolute; text-align: center; color: black; font-size: 45px; font-family: Inter; font-weight: 700; word-wrap: break-word">ADMIN PAGE</div>
+    <div style="width: 851px; height: 0px; left: 446px; top: 202px; position: absolute; border: 1px black solid"></div>
+    <div style="left: 446px; top: 162px; position: absolute; text-align: center; color: black; font-size: 32px; font-family: Inter; font-weight: 700; word-wrap: break-word">상품 등록</div>
+    <div style="width: 286.02px; height: 0px; left: 30px; top: 204px; position: absolute; transform: rotate(-0.60deg); transform-origin: 0 0; border: 4px #BF0A0A solid"></div>
+    <div style="left: 32px; top: 245px; position: absolute; text-align: center; color: black; font-size: 28px; font-family: Inter; font-weight: 700; word-wrap: break-word">회원 목록</div>
+    <div style="left: 30px; top: 471px; position: absolute; text-align: center; color: black; font-size: 28px; font-family: Inter; font-weight: 700; word-wrap: break-word">주문/배송 관리</div>
+    <div style="left: 32px; top: 558px; position: absolute; text-align: center; color: black; font-size: 28px; font-family: Inter; font-weight: 700; word-wrap: break-word">Q&A</div>
+    <div style="left: 31px; top: 313px; position: absolute; text-align: center; color: black; font-size: 28px; font-family: Inter; font-weight: 700; word-wrap: break-word">상품</div>
+    <div style="left: 32px; top: 397px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: Inter; font-weight: 500; word-wrap: break-word">상품 목록</div>
+    <div style="left: 32px; top: 362px; position: absolute; text-align: center; color: black; font-size: 25px; font-family: Inter; font-weight: 500; word-wrap: break-word">상품 등록</div>
+    <div style="left: 446px; top: 226px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">상품명</div>
+    <div style="left: 889px; top: 226px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">가격</div>
+    <div style="left: 453px; top: 314px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">가격</div>
+    <div style="left: 436px; top: 270px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">상품 번호</div>
+    <div style="left: 937px; top: 222px; position: absolute;"><input type="text" id="GOOD_PRICE" style="width: 195px; height: 31px;" placeholder="가격을 입력해주세요 "></div>
+    <div style="left: 509px; top: 266px; position: absolute;"><input type="text" id="GOOD_NO" style="width: 195px; height: 31px;" placeholder="번호를 입력해주세요 "></div>
+    <div style="left: 509px; top: 222px; position: absolute;"><input type="text" id="GOOD_NAME" style="width: 195px; height: 31px;" placeholder="상품명을 입력해주세요 "></div>
+    <div style="left: 439px; top: 362px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">해시태그</div>
+    <div style="left: 509px; top: 358px; position: absolute;"><input type="text" id="GOOD_HASHTAG" style="width: 195px; height: 31px;" placeholder="해시태그를 입력해주세요 "></div>
+    <div style="left: 889px; top: 270px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">수량</div>
+    <div style="text-align: center; width: 194px; height: 28px; left: 937px; top: 266px; position: absolute;"><input type='button' onclick='count("plus")' value='+'/><span id='result'>0</span><input type='button' onclick='count("minus")' value='-'/></div>
+    <div style="width: 188px; height: 28px; left: 937px; top: 315px; position: absolute;"><input type="file" id="good-photo" name="img" required></div>
+    <!-- <div style="left: 951px; top: 314px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">파일첨부</div> -->
+    <div style="left: 881px; top: 314px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">이미지</div>
+    <div style="left: 509px; top: 310px; position: absolute;"><input type="text" id="GOOD_WHAT" style="width: 195px; height: 31px;" placeholder="가격을 입력해주세요 "></div>
+    <div style="width: 851px; height: 280px; left: 436px; top: 476px; position: absolute;"><textarea rows = "18" cols = "118" name = "description">내용을 적어주세요</textarea></div>
+    <div style="left: 436px; top: 456px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">추가 설명</div>
+    <div style="width: 70px; height: 35px; left: 1126px; top: 780px; position: absolute; background: #D9D9D9"></div>
+    <div style="width: 70px; height: 35px; left: 1217px; top: 780px; position: absolute; background: #D9D9D9"></div>
+    <div style="left: 1237px; top: 790px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">취소</div>
+    <div style="left: 1146px; top: 790px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">등록</div>
+    </div>
+    </body>
+    <footer>
+
+    </footer>
+</div>

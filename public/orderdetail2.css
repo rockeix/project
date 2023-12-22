@@ -1,0 +1,110 @@
+/*-----------------------------
+# IMPORTS
+- COLORS: https://codepen.io/luckyluu/pen/bGbLzXe
+- BREAKPOINTS: https://codepen.io/luckyluu/pen/ZEzxLxR
+- TYPO: https://codepen.io/luckyluu/pen/eYOMgXQ
+- MIXIN: https://codepen.io/luckyluu/pen/jOOVgbE
+- WOO: default components https://codepen.io/luckyluu/pen/GMpPgN
+----------------------------- */
+.woocommerce-order-overview {
+    background: #f8f8f8;
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @media (max-width: breakpoint-xs) {
+      display: block;
+    }
+    &:before,
+    &:after {
+      background: -webkit-linear-gradient(transparent 0, transparent 0),
+        -webkit-linear-gradient(135deg, #f8f8f8 33.33%, transparent 33.33%),
+        -webkit-linear-gradient(45deg, #f8f8f8 33.33%, transparent 33.33%);
+      content: "";
+      display: block;
+      position: absolute;
+      top: -16px;
+      left: 0;
+      width: 100%;
+      height: 16px;
+      background-size: 0 100%, 16px 16px, 16px 16px;
+    }
+  
+    &:after {
+      top: auto;
+      bottom: -16px;
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  
+    li {
+      padding: 1em 1.618em;
+      font-size: 0.8em;
+      width: 25%;
+      text-transform: uppercase;
+      border-right: 1px dotted #e3e3e3;
+      text-align: center;
+      @media (max-width: breakpoint-xs) {
+        width: auto;
+        text-align: left;
+        padding: 10px 0;
+        margin: 0 15px;
+        border-right: none;
+        border-bottom: 1px dotted #e3e3e3;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  
+  .woocommerce-table--customer-details {
+    border: none;
+    tbody {
+      th {
+        background: #f8f8f8;
+        padding-left: 25px;
+        @media (max-width: breakpoint-xs) {
+          width: 100%;
+          display: block;
+          text-align: left;
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+      }
+      td {
+        background: #fdfdfd;
+        padding-left: 25px;
+        text-align: left !important;
+      }
+    }
+  }
+  
+  /* TABLE ORDER DETAIL */
+  .shop_table.woocommerce-table--order-details {
+    box-shadow: 0 0 5px rgba(#39b44a, 0.1);
+    thead {
+      background: #000;
+      color: #fff;
+      th {
+        border-bottom: none;
+        font-weight: normal;
+        font-size: .9rem;
+        &.product-name {
+          text-align: left;
+        }
+      }
+    }
+  
+    tbody {
+      td {
+        border-color: #f0f2f7;
+      }
+    }
+  }

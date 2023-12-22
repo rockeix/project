@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="../public/orderdetail.css" rel="stylesheet"> -->
+    <link href="./orderdetail.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</header>
+<body>
+    <section class="h-100 h-custom" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+              <div class="card border-top border-bottom border-3" style="border-color: #9c0410 !important;">
+                <div class="card-body p-5">
+      
+                  <p class="lead fw-bold mb-5" style="color: #9c0410;">주문내역</p>
+      
+                  <div class="row">
+                    <div class="col mb-3">
+                      <p class="small text-muted mb-1">주문날짜</p>
+                      <p>#주문날짜#</p>
+                    </div>
+                    <div class="col mb-3">
+                      <p class="small text-muted mb-1">주문 번호.</p>
+                      <p>#주문번호#</p>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col mb-3">
+                      <p class="small text-muted mb-1">배송받으실 분</p>
+                      <p>#김아무개#</p>
+                    </div>
+                    <div class="col mb-3">
+                      <p class="small text-muted mb-1">전화번호</p>
+                      <p>#전화번호#</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col mb-3">
+                        <p class="small text-muted mb-1">이메일</p>
+                        <p>#이메일@이메일.com#</p>
+                  </div>
+
+                  <div class="row">
+                    <div class="col mb-3">
+                        <p class="small text-muted mb-1">우편번호</p>
+                        <p>#우편번호#</p>
+                  </div>
+
+                  <div class="row">
+                    <div class="col mb-3">
+                        <p class="small text-muted mb-1">주소</p>
+                        <p>#주소&&상세주소#</p>
+                  </div>
+                  
+                  <!-- 반복문으로 테이블 생성해도 죽 늘어납니다 -->
+                  <div class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;">
+                    <!-- <div class="row">
+                      <img id="GOODS_IMG" src="/img/{{goods.img}}" alt="상품" width="100" height="100">
+                    </div> 이미지 추가시 -->
+                    <div class="row">
+                      <div class="col-md-6 col-lg-6">
+                        <p>#상품이름#</p>
+                      </div>
+                      <div class="col-md-4 col-lg-3">
+                        <p>#갯수#EA</p>
+                      </div>
+                      <div class="col-md-4 col-lg-3">
+                        <p>#가격#₩</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8 col-lg-9">
+                        <p class="mb-0">#할인가격#</p>
+                      </div>
+                      <div class="col-md-4 col-lg-3">
+                        <p class="mb-0">#할인액#₩</p>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="row my-4">
+                    <div class="col-md-4 offset-md-8 col-lg-5 offset-lg-9">
+                      <p class="lead fw-bold mb-0" style="color: #9c0410;">#총금액#₩</p>
+                    </div>
+                  </div>
+      
+                  <p class="lead fw-bold mb-4 pb-2" style="color: #9c0410;">배송현황</p>
+      
+                  <div class="row">
+                    <div class="col-lg-12">
+      
+                      <div class="horizontal-timeline">
+                             
+                        <div class="track">
+                            <div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">주문 확인</span> </div>
+                            <div class="step"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text">기사님께 전달</span> </div>
+                            <div class="step"> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text">배송중</span> </div>
+                            <div class="step"> <span class="icon"> <i class="fa fa-box"></i> </span> <span class="text">배송완료</span> </div>
+                        </div>
+      
+                      </div>
+      
+                    </div>
+                  </div>
+      
+                  <p class="mt-4 pt-2 mb-0">문의사항이 있으신가요? <a href="/QNA" style="color: #f37a27;">Q&A탭으로 문의 주세요.</a></p>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+<footer>
+
+</footer>

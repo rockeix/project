@@ -1,0 +1,23 @@
+<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+
+<button onclick="requestPay()">결제하기</button>
+
+<script>
+const userCode = "imp14397622";
+IMP.init(userCode);
+
+function requestPay() {
+  IMP.request_pay({
+    pg: "html5_inicis",
+    pay_method: "card",
+    merchant_uid: "test_lqdh2eo9",
+    name: "테스트 결제",
+    amount: 0,
+    currency: "krw",
+    language: "ko",
+    buyer_name: "",
+    buyer_tel: "010-0000-0000",
+    m_redirect_url: "",
+  });
+}
+</script>

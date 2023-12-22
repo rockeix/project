@@ -1,0 +1,5 @@
+.count-wrap {position: relative;padding: 0 38px;border: 1px solid #ddd;overflow: hidden;width: 60px;}
+.count-wrap > button {border: 0;background: #ddd;color: #000;width: 38px;height: 38px;position: absolute;top: 0;font-size: 12px;}
+.count-wrap > button.minus {left: 0;}
+.count-wrap > button.plus {right: 0;}
+.count-wrap .inp {border: 0;height: 38px;text-align: center;display: block;width: 100%;}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./order.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="nav nav-tabs" id="myTab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#order" role="tab" aria-controls="nav-home" aria-selected="true">Order Details</a>
+        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#product" role="tab" aria-controls="nav-home" aria-selected="true">Product Info</a>
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#factory" role="tab" aria-controls="nav-profile" aria-selected="false">Factory Order</a>
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#customer" role="tab" aria-controls="nav-profile" aria-selected="false">Customer Info</a>
+        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#files" role="tab" aria-controls="nav-contact" aria-selected="false">Files (6)</a>
+    </nav>
+    <br>
+    <div class="tab-content" id="nav-tabContent" style="margin: auto 3rem;">
+        <!-- Order Details -->	
+        <div class="tab-pane fade show active" id="order" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div id="" role="tablist">
+                <div class="row ">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h5 class="mb-0">
+                                    Production Info
+                                </h5>
+                            </div>
+    
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="draftStatus" class="col-sm-4 col-form-label ">Lettering Draft Status</label>
+                                            <div class="col-sm-8">
+                                                <select class="custom-select col-sm-8" id="draftStatus">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="cadStatus" class="col-sm-4 col-form-label ">CAD Status</label>
+                                            <div class="col-sm-8">
+                                                <select class="custom-select col-sm-8" id="cadStatus">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="orderStatus" class="col-sm-4 col-form-label ">Order Status</label>
+                                            <div class="col-sm-8">
+                                                <select class="custom-select col-sm-8" id="orderStatus">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header collapsed" role="tab" id="headingTwo" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <h5 class="mb-0">
+                                    Delivery Info
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse show" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group row">
+                                                <label for="graveyard" class="col-md-4 col-form-label ">Graveyard</label>
+                                                <div class="col-md-8 col-sm-12">
+                                                    <select class="custom-select col-md-8 " id="graveyard">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-4 col-form-label" for="authority">Graveyard Authority</label>
+                                                <div class="col-md-8 col-sm-12">
+                                                    <!-- <input type="text" class="col-md-8 form-control" id="authority" placeholder=""> -->
+                                                    <a href="#">John Doe</a>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="orderStatus" class="col-md-4 col-form-label ">Order Status</label>
+                                                <div class="col-md-8 col-sm-12">
+                                                    <select class="custom-select col-md-8" id="orderStatus">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header collapsed" role="tab" id="headingThree" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <h5 class="mb-0">
+                                    Delivery Status
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="esp" class="col-md-4 col-form-label ">ESP</label>
+                                        <div class="col-md-8 col-sm-12">
+                                            <select class="custom-select col-md-8" id="esp">
+                                                <option selected>Choose...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label" for="location">Location</label>
+                                        <div class="col-md-8 col-sm-12">
+                                            <input type="text" class="col-md-8 form-control" id="location" placeholder="e.g. there ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label" for="trackingNum">Tracking Number</label>
+                                        <div class="col-md-8 col-sm-12">
+                                            <input type="text" class="col-md-8 form-control" id="trackingNum" placeholder="e.g. 123452">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="applicationStatus" class="col-md-4 col-form-label ">Application Status</label>
+                                        <div class="col-md-8 col-sm-12">
+                                            <select class="custom-select col-md-8" id="applicationStatus">
+                                                <option selected>Choose...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="assemblerStatus" class="col-md-4 col-form-label ">Assemblerer Status</label>
+                                        <div class="col-md-8 col-sm-12">
+                                            <select class="custom-select col-md-8" id="assemblerStatus">
+                                                <option selected>Choose...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label" for="assembler">Assembler</label>
+                                        <div class="col-md-8 col-sm-12">
+                                            <select class="custom-select col-md-8" id="assembler">
+                                                <option selected>Choose...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="assemblerPayment" class="col-md-4 col-form-label ">Payment to Assembler</label>
+                                        <div class="col-md-8 col-sm-12">
+                                            <select class="custom-select col-md-8" id="assemblerPayment">
+                                                <option selected>Choose...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-inline h4">Order Details</div>
+                                <div class="d-inline float-right"><small><a href="">Edit</a></small></div>
+                            </div>
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dd class="col-sm-4">Headstone Model</dd>
+                                    <dt class="col-sm-8">Bamse</dt>
+                                    <dd class="col-sm-4">Headstone Material</dd>
+                                    <dt class="col-sm-8">none</dt>
+                                </dl>
+                                <dl class="row">
+                                    
+                                </dl>
+                                <dl class="row">
+                                    <dd class="col-sm-4">Headstone Size</dd>
+                                    <dt class="col-sm-8">Medium (75x65x12)</dt>
+                                    <dd class="col-sm-4">Headstone Base</dd>
+                                    <dt class="col-sm-8">Regular (15x56x24)</dt>
+                                </dl>
+                                <dl class="row">
+                                    <dd class="col-sm-4">Assembler Discount</dd>
+                                    <dt class="col-sm-8">Yes</dt>
+                                    <dd class="col-sm-4">Total Price</dd>
+                                    <dt class="col-sm-8">9330 <br>
+                                        <button>View Bill</button>
+                                    </dt>
+                                </dl>
+                                <hr>
+                                <dl class="row">
+                                    <dt class="col-sm-12">Comments</dt>
+                                    <dd class="col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+                <!-- End of Order Details -->
+                <!--Product Info  -->
+                <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    Display Product Info Content
+                </div>
+                <!--Factory Order  -->
+                <div class="tab-pane fade" id="factory" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    Display Factory Order Content
+                </div>
+                <!--Customer Info  -->
+                <div class="tab-pane fade" id="customer" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    Display Customer Info Content
+                </div>
+                <!--Files   -->
+                <div class="tab-pane fade" id="files" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    Display Files
+                </div>
+            </div>
+        </div>
+</body>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="./order.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <br>
+    <div class="tab-content" id="nav-tabContent" style="margin: auto 3rem;">
+        <!-- Order Details -->	
+        <div class="tab-pane fade show active" id="order" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div id="" role="tablist">
+                <div class="row ">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: #9c0410;">
+                                <h5 class="mb-0" style="color: antiquewhite;">
+                                    주문하실 제품 정보
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <form>
+                                        <div  class="form-group row">
+                                            <div class="d-flex justify-content-center">
+                                                <img id="GOODS_IMG" src="/img/{{goods.img}}" alt="상품" width="100" height="100">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="d-flex justify-content-center">
+                                                <label>%제품명%</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="ORDER_GOODS_CNT" class="col-sm-4 col-form-label ">갯수</label>
+                                            <div class="col-sm-8">
+                                                <select class="custom-select col-sm-8" id="ORDER_GOODS_CNT">
+                                                    <option selected>고르세요...</option>
+                                                    <option value="1">1EA</option>
+                                                    <option value="2">2EA</option>
+                                                    <option value="3">3EA</option>
+                                                    <option value="4">4EA</option>
+                                                    <option value="5">5EA</option>
+                                                    <option value="6">6EA</option>
+                                                    <option value="7">7EA</option>
+                                                    <option value="8">8EA</option>
+                                                    <option value="9">9EA</option>
+                                                    <option value="10">10EA</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="d-flex justify-content-center">
+                                                <label>%가격%</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header collapsed" role="tab" id="headingThree" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-color: #9c0410;">
+                                <h5 class="mb-0" style="color: antiquewhite;">
+                                    배송지 정보
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="DE_NAME" class="col-md-4 col-form-label ">받으시는분</label>
+                                        <div class="col-md-6 col-sm-12">
+                                            <input type="text" class="col-md-6 form-control" id="DE_NAME" placeholder="이름을 기입해 주세요 ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label" for="DE_PHONE">전화번호</label>
+                                        <div class="col-md-6 col-sm-12">
+                                            <input type="text" class="col-md-6 form-control" id="DE_PHONE" placeholder="-을 포함하여 작성해주세요 ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label" for="DE_ZIPCODE">우편번호</label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                              <input type="text" class="col-md-6 form-control" id="DE_ZIPCODE" placeholder="e.g. 123452">
+                                              <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button" onclick="location.href='/zipcode'">우편번호 찾기</button>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-4 col-form-label" for="DE_ADDR1">기본 주소</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                  <input type="text" class="col-md-8 form-control" id="DE_ADDR1" placeholder="입력하세요">
+                                                  <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button" onclick="location.href='/ADDR1'">주소 찾기</button>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                    <div class="form-group row">
+                                        <label for="DE_ADR2" class="col-md-4 col-form-label ">상세주소</label>
+                                        <div class="col-md-6 col-sm-12">
+                                            <input type="text" class="col-md-6 form-control" id="DE_ADR2" placeholder="상세주소를 입력하세요 ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label" for="DE_MEMO">배송 메세지</label>
+                                        <div class="col-md-6 col-sm-12">
+                                            <input type="text" class="col-md-6 form-control" id="DE_MEMO" placeholder="배송메모를 적어주세요 ">
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group row">
+                                        <label for="assemblerPayment" class="col-md-4 col-form-label ">Payment to Assembler</label>
+                                        <div class="col-md-8 col-sm-12">
+                                            <select class="custom-select col-md-8" id="assemblerPayment">
+                                                <option selected>Choose...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header collapsed" role="tab" id="headingTwo" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background-color: #9c0410;">
+                                <h5 class="mb-0" style="color: antiquewhite;">
+                                    결제 정보
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse show" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group row">
+                                                <label for="ORDER_PAYMENT" class="col-md-4 col-form-label ">결제방법</label>
+                                                <div class="col-md-8 col-sm-12">
+                                                    <select class="custom-select col-md-8 " id="ORDER_PAYMENT">
+                                                        <option selected>선택하세요...</option>
+                                                        <option value="1">카드결제</option>
+                                                        <option value="2">계좌입금</option>
+                                                        <option value="3">무통장입금</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="form-group row">
+                                                <label for="orderStatus" class="col-md-4 col-form-label ">Order Status</label>
+                                                <div class="col-md-8 col-sm-12">
+                                                    <select class="custom-select col-md-8" id="orderStatus">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
+                                            <div class="form-group row">
+                                                <!-- <label class="col-md-4 col-form-label" for="authority">Graveyard Authority</label> -->
+                                                <div class="d-flex justify-content-center">
+                                                    <!-- <input type="text" class="col-md-8 form-control" id="authority" placeholder=""> -->
+                                                    <button class="btn btn-default" type="button" onclick="location.href='/PAY'">결제</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header" style="background-color: #9c0410;">
+                                <div class="d-inline h4" style="color: antiquewhite;">주문상세</div>
+                            </div>
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dd class="col-sm-4">주문하시는 분</dd>
+                                    <dt class="col-sm-8">%ID OR 이름%</dt>
+                                    <dd class="col-sm-4">이메일</dd>
+                                    <dt class="col-sm-8">%이메일%</dt>
+                                    <dd class="col-sm-4">전화번호</dd>
+                                    <dt class="col-sm-8">%전화번호%</dt>
+                                </dl>
+                                <dl class="row">
+                                    
+                                </dl>
+                                <dl class="row">
+                                    <dd class="col-sm-4">상품가격</dd>
+                                    <dt class="col-sm-8">%원%</dt>
+                                    <dd class="col-sm-4">할인금액</dd>
+                                    <dt class="col-sm-8">%원%</dt>
+                                </dl>
+                                <dl class="row">
+                                    <dd class="col-sm-4">총 가격</dd>
+                                    <dt class="col-sm-8">%원%<br>
+                                    </dt>
+                                </dl>
+                                <hr>
+                                <dl class="row">
+                                    <dt class="col-sm-12" style="color: #9c0410;">주의사항</dt>
+                                    <dd class="col-sm-12">상품 배송 후 단순 변심 또는 제품 파손으로 인한 환불은<br>
+                                    받지 않습니다.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+                <!-- End of Order Details -->
+                <!--Product Info  -->
+                <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    Display Product Info Content
+                </div>
+                <!--Factory Order  -->
+                <div class="tab-pane fade" id="factory" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    Display Factory Order Content
+                </div>
+                <!--Customer Info  -->
+                <div class="tab-pane fade" id="customer" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    Display Customer Info Content
+                </div>
+                <!--Files   -->
+                <div class="tab-pane fade" id="files" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    Display Files
+                </div>
+            </div>
+        </div>
+</body>
+<footer>
+
+</footer>
