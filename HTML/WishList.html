@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="orderlist.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="app-header">
+        <div class="app-header-left">
+          <!-- <span class="app-icon"></span> -->
+          <button class="menu-btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+            <path d="M20 7L4 7" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M20 12L4 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M20 17L4 17" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path>
+            </g></svg>
+          </button>
+          <a href="#" onclick="location.href='../main/main.html'" style="text-decoration: none;"><p class="app-name">YACJANGSU</p></a>
+          <div class="search-wrapper">
+            <input class="search-input" type="text" placeholder="Search">
+            <a href="#" onclick="location.href='main.html'" style="text-decoration: none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+              <defs></defs>
+              <circle cx="11" cy="11" r="8"></circle>
+                  <path d="M21 21l-4.35-4.35"></path>
+                  </svg></a>
+          </div>
+        </div>
+        <div class="app-header-right">
+          <button class="join-btn" onClick="location.href='../main/login.html'">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="4" stroke="#000000" stroke-width="1.5"></circle>
+            <path d="M15 13.3271C14.0736 13.1162 13.0609 13 12 13C7.58172 13 4 15.0147 4 17.5C4 19.9853 4 22 12 22C17.6874 22 19.3315 20.9817 19.8068 19.5" stroke="#000000" stroke-width="1.5"></path>
+            <circle cx="18" cy="16" r="4" stroke="#000000" stroke-width="1.5"></circle> <path d="M18 14.6667V17.3333" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M16.6665 16L19.3332 16" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+          </button>
+          <button class="cart-btn" onClick="location.href='../main/cart.html'">            
+            <svg viewBox="0 0 24 24" fill="none"  xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+            <path d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z" stroke="#000000" stroke-width="1.5"></path>
+            <path d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z" stroke="#000000" stroke-width="1.5"></path>
+            <path d="M2.26121 3.09184L2.50997 2.38429H2.50997L2.26121 3.09184ZM2.24876 2.29246C1.85799 2.15507 1.42984 2.36048 1.29246 2.75124C1.15507 3.14201 1.36048 3.57016 1.75124 3.70754L2.24876 2.29246ZM4.58584 4.32298L5.20507
+            3.89983V3.89983L4.58584 4.32298ZM5.88772 14.5862L5.34345 15.1022H5.34345L5.88772 14.5862ZM20.6578 9.88275L21.3923 10.0342L21.3933 10.0296L20.6578 9.88275ZM20.158 12.3075L20.8926 12.4589L20.158 12.3075ZM20.7345 6.69708L20.1401
+            7.15439L20.7345 6.69708ZM19.1336 15.0504L18.6598 14.469L19.1336 15.0504ZM5.70808 9.76V7.03836H4.20808V9.76H5.70808ZM2.50997 2.38429L2.24876 2.29246L1.75124 3.70754L2.01245 3.79938L2.50997 2.38429ZM10.9375 16.25H16.2404V14.75H10.9375V16.25ZM5.70808
+            7.03836C5.70808 6.3312 5.7091 5.7411 5.65719 5.26157C5.60346 4.76519 5.48705 4.31247 5.20507 3.89983L3.96661 4.74613C4.05687 4.87822 4.12657 5.05964 4.1659 5.42299C4.20706 5.8032 4.20808 6.29841 4.20808 7.03836H5.70808ZM2.01245 3.79938C2.68006 4.0341
+            3.11881 4.18965 3.44166 4.34806C3.74488 4.49684 3.87855 4.61727 3.96661 4.74613L5.20507 3.89983C4.92089 3.48397 4.54304 3.21763 4.10241 3.00143C3.68139 2.79485 3.14395 2.60719 2.50997 2.38429L2.01245 3.79938ZM4.20808 9.76C4.20808 11.2125 4.22171 12.2599
+            4.35876 13.0601C4.50508 13.9144 4.79722 14.5261 5.34345 15.1022L6.43198 14.0702C6.11182 13.7325 5.93913 13.4018 5.83723 12.8069C5.72607 12.1578 5.70808 11.249 5.70808 9.76H4.20808ZM10.9375 14.75C9.52069 14.75 8.53763 14.7482 7.79696 14.6432C7.08215 14.5418
+            6.70452 14.3576 6.43198 14.0702L5.34345 15.1022C5.93731 15.7286 6.69012 16.0013 7.58636 16.1283C8.45674 16.2518 9.56535 16.25 10.9375 16.25V14.75ZM4.95808 6.87H17.0888V5.37H4.95808V6.87ZM19.9232 9.73135L19.4235 12.1561L20.8926 12.4589L21.3923 10.0342L19.9232
+            9.73135ZM17.0888 6.87C17.9452 6.87 18.6989 6.871 19.2937 6.93749C19.5893 6.97053 19.8105 7.01643 19.9659 7.07105C20.1273 7.12776 20.153 7.17127 20.1401 7.15439L21.329 6.23978C21.094 5.93436 20.7636 5.76145 20.4632 5.65587C20.1567 5.54818 19.8101 5.48587 19.4604
+            5.44678C18.7646 5.369 17.9174 5.37 17.0888 5.37V6.87ZM21.3933 10.0296C21.5625 9.18167 21.7062 8.47024 21.7414 7.90038C21.7775 7.31418 21.7108 6.73617 21.329 6.23978L20.1401 7.15439C20.2021 7.23508 20.2706 7.38037 20.2442 7.80797C20.2168 8.25191 20.1002 8.84478 19.9223
+            9.73595L21.3933 10.0296ZM16.2404 16.25C17.0021 16.25 17.6413 16.2513 18.1566 16.1882C18.6923 16.1227 19.1809 15.9794 19.6074 15.6318L18.6598 14.469C18.5346 14.571 18.3571 14.6525 17.9744 14.6994C17.5712 14.7487 17.0397 14.75 16.2404 14.75V16.25ZM19.4235 12.1561C19.2621
+            12.9389 19.1535 13.4593 19.0238 13.8442C18.9007 14.2095 18.785 14.367 18.6598 14.469L19.6074 15.6318C20.0339 15.2842 20.2729 14.8346 20.4453 14.3232C20.6111 13.8312 20.7388 13.2049 20.8926 12.4589L19.4235 12.1561Z" fill="#000000"></path> </g></svg>
+          </button>
+          <button class="profile_btn" onClick="location.href='mypage.html'">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"> <circle cx="12" cy="9" r="3" stroke="#000000" stroke-width="1.5"></circle>
+            <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="1.5"></circle>
+            <path d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+          </button>
+        </div>
+      </div>
+      <div class="app-middle">
+        <button onclick="location.href='../main/productlist.html'">유산균</button>
+        <button>비타민</button>
+        <button>오메가</button>
+        <button>홍삼</button>
+        <button onclick="location.href='../main/event.html'">이벤트</button>
+      </div>
+      <div class="con">
+        
+        <div class="info">
+          <div class="cat2">
+            <div style="margin-left: 30px;">
+              <h2 style="color: #fff;">somin님의</h2>
+              <h2 style="color: #fff;">회원정보입니다.</h2>
+            </div>
+
+            <div style="width: 100px;">
+            </div>
+            <div class="infobox">
+              <div class="point">
+                <h3>주문내역</h3>
+                <hr>
+                <br>
+                <h1 class="pri">5</h1>
+              </div>
+            </div>
+            
+            <!-- <div class='v-line'></div> -->
+            <div class="infobox">
+              <div class="point">
+                <h3>적립금</h3>
+                <br>
+                <h1 class="pri">3000</h1>
+              </div>
+            </div>
+  
+            <!-- <div class='v-line'></div> -->
+  
+            <!-- <div class='v-line'></div> -->
+            <div class="infobox">
+              <a @click="goToOrder">
+                <div class="point">
+                  <h1 class="coun">3</h1>
+                  <h3>배송 중</h3>
+                  
+                  <ul></ul>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-3">
+          <div class="container">
+            <nav>
+            <div class="side">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              <div class="icon-bar mypage-bar">
+                <div>
+                  <!-- <router-link class="m" to="/mypage"> -->
+                    <button onclick="location.href='mypage.html'" style="background-color: #fff; border-color: #fff; border-style: none;">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <circle cx="9" cy="9" r="2" stroke="#9c0410" stroke-width="1.5"></circle>
+                        <path d="M13 15C13 16.1046 13 17 9 17C5 17 5 16.1046 5 15C5 13.8954 6.79086
+                        13 9 13C11.2091 13 13 13.8954 13 15Z" stroke="#9c0410" stroke-width="1.5"></path>
+                        <path d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10
+                        4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22
+                        15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876
+                        20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z" stroke="#9c0410" stroke-width="1.5">
+                      </path> <path d="M19 12H15" stroke="#9c0410" stroke-width="1.5" stroke-linecap="round"></path>
+                      <path d="M19 9H14" stroke="#9c0410" stroke-width="1.5" stroke-linecap="round"></path>
+                      <path d="M19 15H16" stroke="#9c0410" stroke-width="1.5" stroke-linecap="round"></path>
+                    </g></svg>
+                    <p>회원 정보</p></button>
+                  <!-- </router-link> -->
+                </div>
+                <div>
+                  <!-- <router-link to="/mypage/orderList" class="m"> -->
+                    <button onclick="location.href='mypage.html'" style="background-color: #fff; border-color: #fff; border-style: none;">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier"> <path d="M6 8H10" stroke="#9c0410" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M20.8333 9H18.2308C16.4465 9 15 10.3431 15 12C15 13.6569 16.4465 15
+                        18.2308 15H20.8333C20.9167 15 20.9583 15 20.9935 14.9979C21.5328 14.965 21.9623
+                        14.5662 21.9977 14.0654C22 14.0327 22 13.994 22 13.9167V10.0833C22 10.006 22
+                        9.96726 21.9977 9.9346C21.9623 9.43384 21.5328 9.03496 20.9935 9.00214C20.9583
+                        9 20.9167 9 20.8333 9Z" stroke="#9c0410" stroke-width="1.5"></path>
+                        <path d="M20.965 9C20.8873 7.1277 20.6366 5.97975 19.8284 5.17157C18.6569
+                        4 16.7712 4 13 4L10 4C6.22876 4 4.34315 4 3.17157 5.17157C2 6.34315 2 8.22876
+                        2 12C2 15.7712 2 17.6569 3.17157 18.8284C4.34315 20 6.22876 20 10 20H13C16.7712
+                        20 18.6569 20 19.8284 18.8284C20.6366 18.0203 20.8873 16.8723 20.965 15"
+                        stroke="#9c0410" stroke-width="1.5"></path> <path d="M17.9912 12H18.0002"
+                        stroke="#9c0410" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                      <p>주문 내역</p></button>
+                  <!-- </router-link> -->
+                </div>
+                <div>
+                  <!-- <router-link to="/mypage/myReview" class="m"> -->
+                    <button onclick="location.href='mypage.html'" style="background-color: #fff; border-color: #fff; border-style: none;">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier"> <path d="M22 10.5V12C22 16.714 22 19.0711 20.5355
+                        20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2
+                        19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2H13.5"
+                        stroke="#9c0410" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M16.652 3.45506L17.3009 2.80624C18.3759 1.73125 20.1188 1.73125 21.1938
+                        2.80624C22.2687 3.88124 22.2687 5.62415 21.1938 6.69914L20.5449 7.34795M16.652
+                        3.45506C16.652 3.45506 16.7331 4.83379 17.9497 6.05032C19.1662 7.26685 20.5449
+                        7.34795 20.5449 7.34795M16.652 3.45506L10.6872 9.41993C10.2832 9.82394 10.0812
+                        10.0259 9.90743 10.2487C9.70249 10.5114 9.52679 10.7957 9.38344 11.0965C9.26191
+                        11.3515 9.17157 11.6225 8.99089 12.1646L8.41242 13.9M20.5449 7.34795L14.5801
+                        13.3128C14.1761 13.7168 13.9741 13.9188 13.7513 14.0926C13.4886 14.2975 13.2043
+                        14.4732 12.9035 14.6166C12.6485 14.7381 12.3775 14.8284 11.8354 15.0091L10.1 15.5876M10.1
+                        15.5876L8.97709 15.9619C8.71035 16.0508 8.41626 15.9814 8.21744 15.7826C8.01862 15.5837
+                        7.9492 15.2897 8.03811 15.0229L8.41242 13.9M10.1 15.5876L8.41242 13.9" stroke="#9c0410"
+                        stroke-width="1.5"></path> </g></svg>
+                      <p>나의 리뷰</p></button>
+                  <!-- </router-link>    -->
+                </div>
+
+                <div>
+                  <!-- <router-link to="/mypage/myQna" class="m"> -->
+                    <button onclick="location.href='mypage.html'" style="background-color: #fff; border-color: #fff; border-style: none;">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                      stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 12C2 7.28595 2 4.92893 3.46447
+                        3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22
+                        16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2
+                        19.0711 2 16.714 2 12Z" stroke="#9c0410" stroke-width="1.5"></path>
+                        <path d="M10.125 8.875C10.125 7.83947 10.9645 7 12 7C13.0355 7 13.875 7.83947 13.875
+                        8.875C13.875 9.56245 13.505 10.1635 12.9534 10.4899C12.478 10.7711 12 11.1977 12 11.75V13"
+                        stroke="#9c0410" stroke-width="1.5" stroke-linecap="round"></path>
+                      <circle cx="12" cy="16" r="1" fill="#9c0410"></circle> </g></svg>
+                      <p>문의 내역</p></button>
+                  <!-- </router-link> -->
+                </div>
+
+                <div>
+                  <!-- <router-link to="/mypage/myQna" class="m"> -->
+                    <button onclick="location.href='mypage.html'" style="background-color: #fff; border-color: #fff; border-style: none;">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path d="M8.96173 18.9109L9.42605 18.3219L8.96173 18.9109ZM12 5.50063L11.4596
+                        6.02073C11.601 6.16763 11.7961 6.25063 12 6.25063C12.2039 6.25063 12.399 6.16763
+                        12.5404 6.02073L12 5.50063ZM15.0383 18.9109L15.5026 19.4999L15.0383 18.9109ZM9.42605
+                        18.3219C7.91039 17.1271 6.25307 15.9603 4.93829 14.4798C3.64922 13.0282 2.75 11.3345
+                        2.75 9.1371H1.25C1.25 11.8026 2.3605 13.8361 3.81672 15.4758C5.24723 17.0866 7.07077
+                        18.3752 8.49742 19.4999L9.42605 18.3219ZM2.75 9.1371C2.75 6.98623 3.96537 5.18252 5.62436
+                        4.42419C7.23607 3.68748 9.40166 3.88258 11.4596 6.02073L12.5404 4.98053C10.0985 2.44352
+                        7.26409 2.02539 5.00076 3.05996C2.78471 4.07292 1.25 6.42503 1.25 9.1371H2.75ZM8.49742
+                        19.4999C9.00965 19.9037 9.55954 20.3343 10.1168 20.6599C10.6739 20.9854 11.3096 21.25
+                        12 21.25V19.75C11.6904 19.75 11.3261 19.6293 10.8736 19.3648C10.4213 19.1005 9.95208
+                        18.7366 9.42605 18.3219L8.49742 19.4999ZM15.5026 19.4999C16.9292 18.3752 18.7528 17.0866
+                        20.1833 15.4758C21.6395 13.8361 22.75 11.8026 22.75 9.1371H21.25C21.25 11.3345 20.3508
+                        13.0282 19.0617 14.4798C17.7469 15.9603 16.0896 17.1271 14.574 18.3219L15.5026 19.4999ZM22.75
+                        9.1371C22.75 6.42503 21.2153 4.07292 18.9992 3.05996C16.7359 2.02539 13.9015 2.44352 11.4596
+                        4.98053L12.5404 6.02073C14.5983 3.88258 16.7639 3.68748 18.3756 4.42419C20.0346 5.18252 21.25
+                        6.98623 21.25 9.1371H22.75ZM14.574 18.3219C14.0479 18.7366 13.5787 19.1005 13.1264
+                        19.3648C12.6739 19.6293 12.3096 19.75 12 19.75V21.25C12.6904 21.25 13.3261 20.9854 13.8832
+                        20.6599C14.4405 20.3343 14.9903 19.9037 15.5026 19.4999L14.574 18.3219Z" fill="#9c0410" stroke-width="5"></path>
+                      </g></svg>
+                    <p>찜한 상품</p></button>
+                  <!-- </router-link> -->
+                </div>
+        
+              </div>
+              
+            </div>
+            </nav>
+            <section>
+                    <div class="myinfo">
+                        <div>
+                            <h2>찜목록</h2>
+                        </div>
+                        <div class="my">
+                            <div class="table-responsive">
+                                <table class="table" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>번호</th>
+                                            <th>상품이미지</th>
+                                            <th>상품명</th>
+                                            <th>금액</th>
+                                            <th>찜한날짜</th>
+                                            <th></th>
+                                            <th>옵션</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(order, i) in uniqueOrderList" :key="i">
+                                            <td>1</td>
+                                            <td>
+                                                <img :width="70" style="border-radius: 10px;"
+                                                    :src="order.items[0].ORDER_GOODS_IMG ? require(`../../../node-back/uploads/uploadGoods/${order.items[0].ORDER_GOODS_IMG}`) : '/goodsempty.jpg'"
+                                                    alt="상품 이미지" />
+                                            </td>
+                                            <td>
+                                                <router-link
+                                                    :to="{ name: 'goodsDetail', params: { goodsno: order.items[0].GOODS_NO } }"
+                                                    class="imgSpace">
+                                                    종합비타민
+                                                </router-link>
+                                                <span v-if="order.items.length > 1">
+                                                    외 3건
+                                                </span>
+                                            </td>
+                                            <td>12900원</td>
+                                            <td>2023년 12월 23일 14:24</td>
+                                            <td>
+                                            </td>
+                                            <td v-if="order.items[0].ORDER_STATUS === 2">
+                                                <button @click="handleReview(order.items[0])" class="rebtn">장바구니</button> <hr>
+                                                <button @click="handleReview(order.items[0])" class="rebtn">취소</button>
+                                            </td>
+                                        </tr>
+                                        <tr v-for="(order, i) in uniqueOrderList" :key="i">
+                                          <td>1</td>
+                                          <td>
+                                              <img :width="70" style="border-radius: 10px;"
+                                                  :src="order.items[0].ORDER_GOODS_IMG ? require(`../../../node-back/uploads/uploadGoods/${order.items[0].ORDER_GOODS_IMG}`) : '/goodsempty.jpg'"
+                                                  alt="상품 이미지" />
+                                          </td>
+                                          <td>
+                                              <router-link
+                                                  :to="{ name: 'goodsDetail', params: { goodsno: order.items[0].GOODS_NO } }"
+                                                  class="imgSpace">
+                                                  종합비타민
+                                              </router-link>
+                                              <span v-if="order.items.length > 1">
+                                                  외 3건
+                                              </span>
+                                          </td>
+                                          <td>12900원</td>
+                                          <td>2023년 12월 23일 14:24</td>
+                                          <td>
+                                          </td>
+                                          <td v-if="order.items[0].ORDER_STATUS === 2">
+                                              <button @click="handleReview(order.items[0])" class="rebtn">장바구니</button> <hr>
+                                              <button @click="handleReview(order.items[0])" class="rebtn">취소</button>
+                                          </td>
+                                      </tr>
+                                        <tr v-if="orderList.length === 0">
+                                            <td colspan="7" style=" padding: 150px 0px;">주문 내역이 없습니다.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+        </div>        
+      </div>
+  </body>
+  <footer class="form">
+    <div class="f_add">
+      <p>&copy; 2023</p>
+      <p>회사소개 | 개인정보처리방침 | 이용약관 | 사업자정보<br>
+        대표자 | YACJANGSU | 사업자등록번호 | 123-02-1234<br>주소 | 서울 종로구 종로 78 미려빌딩 이젠 아카데미 컴퓨터 학원<br>
+        팩스 | 02-383-1234 | 이메일 | yacjangsu@naver.com</p>
+    </div>
+  </footer>
+</html>

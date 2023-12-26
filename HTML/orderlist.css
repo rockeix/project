@@ -1,0 +1,842 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'seolleimcool-SemiBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/seolleimcool-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+    --app-container: #f7f8fa;
+  /* --app-container: #f3f6fd; */
+  --main-color: #1f1c2e;
+  --secondary-color: #4A4A4A;
+  --link-color: #1f1c2e;
+  --link-color-hover: #c3cff4;
+  --link-color-active: #fff;
+  --link-color-active-bg: #1f1c2e;
+  --projects-section: #fff;
+  --message-box-hover: #fafcff;
+  --message-box-border: #e9ebf0;
+  --more-list-bg: #fff;
+  --more-list-bg-hover: #f6fbff;
+  --more-list-shadow: rgba(209, 209, 209, 0.4);
+  --button-bg: #1f1c24;
+  --search-area-bg: #fff;
+  --star: #1ff1c2e;
+  --message-btn: #fff;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    overflow: scroll;
+    /* display: flex;
+    justify-content: center; */
+    background-color: var(--app-container);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgb(218, 218, 218);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #9c0410;
+}
+
+body::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+.app-name {
+    /* color: var(--main-color); */
+    color: #9c0410;
+    margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin: 0 32px;
+}
+.app-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--app-container);
+    transition: 0.2s;
+    max-width: 1800px;
+  }
+  .app-container button, .app-container input, .app-container optgroup, .app-container select, .app-container textarea {
+    font-family: "DM Sans", sans-serif;
+  }
+  
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 24px;
+    position: relative;
+}
+.app-header-left, .app-header-right {
+    display: flex;
+    align-items: center;
+}
+.app-header-left {
+    flex-grow: 1;
+}
+.app-header-right button {
+    margin-left: 10px;
+}
+
+
+.app-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 300px 24px 300px;
+    position: relative;
+}
+
+.app-middle button {
+    width: 100px;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #9c0410;
+    color: #fff;
+    font-family: ONE-Mobile-Regular;
+    font-size: 15px;
+}
+
+.menu-btn {
+    color: var(--main-color);
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-wrapper {
+    border-radius: 20px;
+    background-color: var(--search-area-bg);
+    padding-right: 12px;
+    margin: 0 auto;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    color: var(--light-font);
+    box-shadow: 0 2px 6px 0 rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    overflow: hidden;
+}
+
+.search-input {
+    border: none;
+    flex: 1;
+    outline: none;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 16px;
+    background-color: var(--search-area-bg);
+    color: var(--main-color);
+}
+.search-input:placeholder {
+    color: var(--main-color);
+    opacity: 0.6;
+}
+
+.join-btn {
+    color: var(--main-color);
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-btn {
+    color: var(--main-color);
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile_btn {
+    color: var(--main-color);
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+  float: left;
+  margin-left: 20px;
+  margin-right: 100px;
+}
+
+nav p{
+  font-family: 'seolleimcool-SemiBold';
+}
+
+section{
+  font-family: 'SUITE-Regular';
+  float: left;
+  margin-top: 30px;
+  margin-left: 280px;
+  /* margin-right: 600px; */
+}
+
+.con {
+    justify-content: space-between;
+    align-items: center;
+    flex: 2;
+    background-color: var(--projects-section);
+    border-radius: 32px;
+    /* padding: 50px; */
+    margin: 50px;
+    /* display: flex; */
+    flex-direction: column;
+  }
+
+  .info {
+    font-family: 'GmarketSansMedium';
+    background-color: #9c0410;
+    width: 100%;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 2;
+    border-radius: 32px 32px 0px 0px;
+    padding: 40px;
+    /* margin: 50px; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .con-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
+  }
+  
+  .con-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    color: var(--main-color);
+  }
+  .con-header p {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    opacity: 0.9;
+    margin: 0;
+    color: var(--main-color);
+  }
+  .con-header .time {
+    font-size: 20px;
+  }
+
+  .content {
+    max-width: 1040px;
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+  
+  }
+
+  .cate-list {
+    font-family: ONE-Mobile-Regular;
+  }
+  .cate-header {
+    display: flex;
+    justify-content: space-between;
+  }
+footer{
+    width: 100%;
+}
+.form{
+    margin: 0;
+    padding: 0;
+    left: 0;   
+    bottom: 0;
+    list-style: none;
+    text-decoration: none;
+    /* border: solid 1px red; */
+}
+.f_add{
+    position: relative;
+    height: auto;
+    width: 100%;
+    left: 0;       
+    bottom: 0; 
+    padding: 10px;
+    background: #f2f2f2;
+}
+.f_add p{
+    margin-left: 20px;
+    line-height: 24px;
+    font-size: 12px;
+    color: rgb(173, 173, 173);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.mt-3{
+  flex-direction: column;
+}
+
+.side{
+  width: 100px;
+}
+
+.container {
+  margin: 40px 30px;
+  font-family: GmarketSansMedium;
+  
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+.TopBar p {
+  font-size: 1rem;
+}
+
+.TopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 140px;
+  width: 94%;
+  padding: 0 20px;
+  position: relative;
+  left: -1%;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  border: 2px solid rgb(221, 221, 221);
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------barcat */
+
+.img_box {
+  width: 110px;
+  height: 110px;
+  border-radius: 70%;
+  overflow: hidden;
+  background-color: #e8e8e8;
+
+}
+
+.img_box .img_preview {
+  width: 110px;
+  height: 110px;
+  /* background-color: #bc0c0c; */
+}
+
+.img_box .img_preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cat {
+  display: flex;
+  height: 110px;
+  width: auto;
+  margin-left: 20px;
+  /* border: 1px solid rgb(132, 255, 0); */
+}
+
+.cat img {
+  max-width: 110px;
+}
+
+.cat .name {
+  margin: 30px 0px 30px 20px;
+  width: 20px;
+}
+.cat .name p {
+  text-align: center;
+}
+
+.cat .name .catbtn {
+  margin-top: 8px;
+}
+
+.catbtn {
+  width: 120px;
+  padding: 4px;
+  border-radius: 6px;
+  color: #cc8c00;
+  border: 1px solid #ffbc2b;
+  background-color: #fff2c9;
+  font-family: GmarketSansMedium;
+  cursor: pointer;
+}
+
+.infobox{
+  background-color: #fff;
+  width: 260px; 
+  height: 130px;
+  padding: 30px;
+}
+
+.infobox h1{
+  text-align: center;
+}
+
+.cat2 {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  /* border: 1px solid rgb(255, 0, 0); */
+}
+
+/* ---------------------------------------------point */
+
+.point {
+  /* width: 8vw; */
+  text-align: center;
+}
+
+.point .pri {
+  padding-bottom: 4px;
+}
+
+
+/* ---------------------------------------------like */
+
+.like {
+  align-items: center;
+  width: 8vw;
+  text-align: center;
+}
+
+.like .coun {
+  padding-bottom: 4px;
+}
+
+/* ------------------------------------- */
+
+.look {
+  align-items: center;
+  width: 8vw;
+  text-align: center;
+  margin-right: 60px;
+}
+
+.look .coun {
+  padding-bottom: 4px;
+}
+
+/* ------------------------------------- */
+.v-line {
+  border-radius: 30px;
+  border-left: 2px solid rgb(221, 221, 221);
+  height: 80px;
+  margin: 0 4vw;
+}
+
+.v-line:nth-child(1) {
+  margin-left: 30px;
+}
+
+/* -------------------------------------------------------------------myinfo */
+
+.myinfo {
+  margin-top: 30px;
+  /* background-color: #fff2c9; */
+}
+
+.my p {
+  width: 100px;
+  font-size: 20px;
+  /* font-size: 1rem; */
+  display: inline-block;
+  vertical-align: middle;
+  padding: 2px;
+  margin: 0px 30px 16px 0px;
+  /* border: 1px solid red; */
+}
+
+.my .detail {
+  display: flex;
+}
+
+.my .detail h4 {
+  font-size: 20px;
+}
+
+.btn {
+  display: flex;
+  margin-top: 40px;
+}
+
+.modifybtn {
+  width: 120px;
+  padding: 6px;
+  border-radius: 6px;
+  color: #9c0410;
+  border: 1px solid #9c0410;
+  background-color: #f0f0f0;
+  font-family: GmarketSansMedium;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.detail .de h4 {
+  margin-bottom: 10px;
+}
+
+.deletebtn {
+  width: 120px;
+  padding: 6px;
+  border-radius: 6px;
+  color: #888888;
+  border: 1px solid #f0f0f0;
+  font-family: GmarketSansMedium;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+
+@media screen and (max-width: 768px) {
+
+  .TopBar {
+    display: inline-block;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    padding: 0px;
+    background-color: #ffffff;
+    border: none;
+  }
+
+  /* ------------------------------------------------------barcat */
+
+  .cat {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cat img {
+    max-width: 80px;
+  }
+
+  .img_box {
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    min-height: 80px;
+  }
+
+  .cat .name {
+    margin: 6px 0px 40px 20px;
+  }
+
+  .cat2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* ---------------------------------------------point */
+
+  .point {
+    display: inline-block;
+    width: 80%;
+    min-width: 100px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* ---------------------------------------------like */
+
+  .like {
+    display: inline-block;
+    width: 80%;
+    min-width: 100px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* ------------------------------------- */
+
+  .look {
+    display: inline-block;
+    width: 80%;
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  .v-line {
+    display: flex;
+    height: 40px;
+    margin: 2px;
+    /* margin: 0 4%; */
+    border-radius: 0;
+  }
+
+  .v-line:nth-child(1) {
+    display: none;
+  }
+
+  .myinfo {
+    position: relative;
+    top: -60px;
+  }
+
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
+  
+  .mypage-bar{font-family: GmarketSansMedium}
+  
+  .mypage-bar {
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+  }
+  .mypage-bar::-webkit-scrollbar {
+      display: none; /* 크롬, 사파리, 오페라, 엣지 */
+  }
+  
+  .mypage-bar {
+    /* height: 500px; */
+    width: 100px;
+    /* position: fixed;  */
+    /* z-index: 2; /* Stay on top */
+    top: 150px; /* Stay at the top */
+    margin-top: 20px;
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /* background-color: rgb(255, 221, 147); */
+  }
+  
+  /* icon */
+  .mypage-bar .m, .icon-bar p{
+    color: #9c0410;
+  }
+  
+  .mypage-bar a {
+    display: block;
+    text-align: center;
+    height: 60px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .mypage-bar p {
+    margin: auto;
+    font-size: 20px;
+    padding-top: 4px;
+    margin-bottom: 80px;
+  }
+  
+  .mypage-bar .m:hover{
+    background-color: #fff6ca;
+  }
+  
+  .active {
+    background-color: #5eaf13;
+  }
+  /* --------------------------------------------------------- */
+  a.imgSpace {
+    color: inherit;
+    text-decoration: none;
+}
+
+.imgSpace:hover {
+    color: #9c0410;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    margin: 40px 30px;
+    font-family: GmarketSansMedium;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+/* ------------------------------------------------------barcat */
+
+.rebtn {
+    width: 70px;
+    padding: 4px;
+    border-radius: 6px;
+    color: #ffffff;
+    border: 1px solid #ef2435a1;
+    background-color: #9c0410;
+    font-family: GmarketSansMedium;
+    cursor: pointer;
+}
+
+
+/* -------------------------------------------------------------------myinfo */
+
+.myinfo {
+    margin-top: 30px;
+    /* background-color: #fff2c9; */
+}
+
+.my .table {
+    max-width: 1200px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-collapse: separate;
+   border-spacing: 10px 10px;
+}
+
+.my .table th {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.my p {
+    width: 100px;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+    margin: 0px 30px 16px 0px;
+    /* border: 1px solid red; */
+}
+
+.my .detail {
+    display: flex;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+
+@media screen and (max-width: 768px) {
+
+    /* ------------------------------------------------------barcat */
+    .myinfo {
+        position: relative;
+    }
+
+}
+
+hr {
+  border: 0px;
+  margin: 1px 0;
+}
